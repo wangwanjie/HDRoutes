@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HDRoutes
+//  HDRoutess
 //
 //  Created by VanJay on 2019/7/13.
 //  Copyright © 2019 VanJay. All rights reserved.
@@ -10,37 +10,38 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        HDRoutes.verboseLoggingEnabled = true
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        HDRoutes.routesForScheme("ViPay")?.addRoute(pattern: "/test/:opt(/a)(/b)(/c)", priority: 10, handler: { (params) -> Bool in
+            print("打开测试页面\(params)")
+            return true
+        })
+
+        HDRoutes.globalRoutes()?.addRoute(pattern: "/test1", handler: { (params) -> Bool in
+            print("打开测试1页面\(params)")
+            return true
+        })
+
+        HDRoutes.routesForScheme("ViPay")?.unmatchedURLHandler = { _, _, _ in
+            print("无法识别的 ViPay 路由")
+        }
+
+        HDRoutes.globalRoutes()?.unmatchedURLHandler = { _, _, _ in
+            print("无法识别的路由")
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            _ = HDRoutes.routeURL(URL(string: "ViPay://test/:opt?a=6")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
+
+            _ = HDRoutes.routeURL(URL(string: "/test1?age=27#topic")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
+
+            _ = HDRoutes.routeURL(URL(string: "ViPay://8978998798q")!)
+            _ = HDRoutes.routeURL(URL(string: "jhkhjkkk")!)
+        }
+
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
-
