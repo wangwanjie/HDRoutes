@@ -1,17 +1,16 @@
 Pod::Spec.new do |s|
-  s.name         = "JLRoutes"
-  s.version      = "2.1"
-  s.summary      = "URL routing library for iOS with a simple block-based API."
-  s.homepage     = "https://github.com/joeldev/JLRoutes"
+  s.name         = "HDRoutes"
+  s.version      = "0.3.0"
+  s.summary      = "URL routing library for iOS with a simple API written in Swift 5."
+  s.homepage     = "https://github.com/wangwanjie/HDLRoutes"
   s.license      = "BSD 3-Clause \"New\" License"
-  s.author       = { "Joel Levin" => "joel@joeldev.com" }
-  s.source       = { :git => "https://github.com/joeldev/JLRoutes.git", :tag => "2.1" }
+  s.author       = { "VanJay" => "wangwanjie1993@gmail.com" }
+  s.source       = { :git => "https://github.com/wangwanjie/HDRoutes.git", :tag => "0.3.0" }
   s.framework    = 'Foundation'
   s.requires_arc = true
+  s.swift_version = "5"
 
-  s.source_files = 'JLRoutes', 'JLRoutes/*.{h,m}', 'JLRoutes/Classes/*.{h,m}'
+  s.source_files = 'HDRoutes', 'HDRoutes/*.{swift}', 'HDRoutes/Classes/*.{swift}'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 end

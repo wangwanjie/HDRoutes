@@ -3,18 +3,25 @@ HDRoutes
 
 [![Platforms](https://img.shields.io/cocoapods/p/HDRoutes.svg?style=flat)](http://cocoapods.org/pods/HDRoutes)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/HDRoutes.svg)](http://cocoapods.org/pods/HDRoutes)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/wangwanjie/HDRoutes.svg?branch=master)](https://travis-ci.org/wangwanjie/HDRoutes)
-[![Apps](https://img.shields.io/cocoapods/at/HDRoutes.svg?maxAge=2592000)](https://cocoapods.org/pods/HDRoutes)
 
 ### What is it? ###
+
+> *Notice*
+> 
+[HDRoutes](https://github.com/wangwanjie/HDRoutes) is a translation version for [JLRoutes](https://github.com/joeldev/JLRoutes) in Swift 5, all copyrights belong to origin author.
+
 HDRoutes is a URL routing library with a simple block-based API. It is designed to make it very easy to handle complex URL schemes in your application with minimal code.
 
 ### Installation ###
-HDRoutes is available for installation using [CocoaPods](https://cocoapods.org/pods/HDRoutes) or Carthage (add `github "wangwanjie/HDRoutes"` to your `Cartfile`).
+HDRoutes is available for installation using [CocoaPods](https://cocoapods.org/pods/HDRoutes)
+
+```
+pod 'HDRoutes'
+```
 
 ### Requirements ###
-HDRoutes 2.x require iOS 10.0+.
+HDRoutes require iOS 10.0+.
 
 ### Getting Started ###
 

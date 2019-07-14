@@ -1,0 +1,6 @@
+framework module Pods_HDRoutesExample {
+  umbrella header "Pods-HDRoutesExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

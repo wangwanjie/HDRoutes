@@ -12,22 +12,23 @@
 		9537200222D97F230087236A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9537200022D97F230087236A /* Main.storyboard */; };
 		9537200422D97F280087236A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9537200322D97F280087236A /* Assets.xcassets */; };
 		9537200722D97F280087236A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9537200522D97F280087236A /* LaunchScreen.storyboard */; };
-		9537201122D97F450087236A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537200F22D97F450087236A /* Extension.swift */; };
-		9537201222D97F450087236A /* HDRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537201022D97F450087236A /* HDRoutes.swift */; };
-		9537201422D97F840087236A /* HDRoutesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537201322D97F840087236A /* HDRoutesUtil.swift */; };
+		FD0764EC72E1F7342C383994 /* Pods_HDRoutesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		95371FF922D97F230087236A /* HDRoutes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDRoutes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		122FF71FCB7F335BF7052C25 /* Pods_HDRoutes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDRoutes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304415EE326A780C44AFE2D5 /* Pods-HDRoutes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutes.debug.xcconfig"; path = "Target Support Files/Pods-HDRoutes/Pods-HDRoutes.debug.xcconfig"; sourceTree = "<group>"; };
+		564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutesExample.release.xcconfig"; path = "Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample.release.xcconfig"; sourceTree = "<group>"; };
+		7066FF1ADBC1B1613A91F4A6 /* Pods-HDRoutes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutes.release.xcconfig"; path = "Target Support Files/Pods-HDRoutes/Pods-HDRoutes.release.xcconfig"; sourceTree = "<group>"; };
+		95371FF922D97F230087236A /* HDRoutesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDRoutesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95371FFC22D97F230087236A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95371FFE22D97F230087236A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9537200122D97F230087236A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9537200322D97F280087236A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9537200622D97F280087236A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9537200822D97F280087236A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9537200F22D97F450087236A /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		9537201022D97F450087236A /* HDRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDRoutes.swift; sourceTree = "<group>"; };
-		9537201322D97F840087236A /* HDRoutesUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDRoutesUtil.swift; sourceTree = "<group>"; };
+		B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutesExample.debug.xcconfig"; path = "Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample.debug.xcconfig"; sourceTree = "<group>"; };
+		E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDRoutesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,32 +36,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0764EC72E1F7342C383994 /* Pods_HDRoutesExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1961415FA0755F93277B19EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				304415EE326A780C44AFE2D5 /* Pods-HDRoutes.debug.xcconfig */,
+				7066FF1ADBC1B1613A91F4A6 /* Pods-HDRoutes.release.xcconfig */,
+				B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */,
+				564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7973F8AC06BF34DE30E94928 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				122FF71FCB7F335BF7052C25 /* Pods_HDRoutes.framework */,
+				E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95371FF022D97F230087236A = {
 			isa = PBXGroup;
 			children = (
-				95371FFB22D97F230087236A /* HDRoutes */,
+				95371FFB22D97F230087236A /* HDRoutesExample */,
 				95371FFA22D97F230087236A /* Products */,
+				1961415FA0755F93277B19EA /* Pods */,
+				7973F8AC06BF34DE30E94928 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		95371FFA22D97F230087236A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95371FF922D97F230087236A /* HDRoutes.app */,
+				95371FF922D97F230087236A /* HDRoutesExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95371FFB22D97F230087236A /* HDRoutes */ = {
+		95371FFB22D97F230087236A /* HDRoutesExample */ = {
 			isa = PBXGroup;
 			children = (
-				9537200E22D97F330087236A /* Source */,
 				95371FFC22D97F230087236A /* AppDelegate.swift */,
 				95371FFE22D97F230087236A /* ViewController.swift */,
 				9537200022D97F230087236A /* Main.storyboard */,
@@ -68,37 +91,29 @@
 				9537200522D97F280087236A /* LaunchScreen.storyboard */,
 				9537200822D97F280087236A /* Info.plist */,
 			);
-			path = HDRoutes;
-			sourceTree = "<group>";
-		};
-		9537200E22D97F330087236A /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				9537201322D97F840087236A /* HDRoutesUtil.swift */,
-				9537201022D97F450087236A /* HDRoutes.swift */,
-				9537200F22D97F450087236A /* Extension.swift */,
-			);
-			path = Source;
+			path = HDRoutesExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95371FF822D97F230087236A /* HDRoutes */ = {
+		95371FF822D97F230087236A /* HDRoutesExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9537200B22D97F280087236A /* Build configuration list for PBXNativeTarget "HDRoutes" */;
+			buildConfigurationList = 9537200B22D97F280087236A /* Build configuration list for PBXNativeTarget "HDRoutesExample" */;
 			buildPhases = (
+				7B168A4E8D46783BAA02A209 /* [CP] Check Pods Manifest.lock */,
 				95371FF522D97F230087236A /* Sources */,
 				95371FF622D97F230087236A /* Frameworks */,
 				95371FF722D97F230087236A /* Resources */,
+				73602FDDD7C7BAC6BEF5E587 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HDRoutes;
+			name = HDRoutesExample;
 			productName = HDRoutes;
-			productReference = 95371FF922D97F230087236A /* HDRoutes.app */;
+			productReference = 95371FF922D97F230087236A /* HDRoutesExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95371FF422D97F230087236A /* Build configuration list for PBXProject "HDRoutes" */;
+			buildConfigurationList = 95371FF422D97F230087236A /* Build configuration list for PBXProject "HDRoutesExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95371FF822D97F230087236A /* HDRoutes */,
+				95371FF822D97F230087236A /* HDRoutesExample */,
 			);
 		};
 /* End PBXProject section */
@@ -147,16 +162,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73602FDDD7C7BAC6BEF5E587 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HDRoutes/HDRoutes.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDRoutes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B168A4E8D46783BAA02A209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HDRoutesExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95371FF522D97F230087236A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9537201422D97F840087236A /* HDRoutesUtil.swift in Sources */,
-				9537201122D97F450087236A /* Extension.swift in Sources */,
 				95371FFF22D97F230087236A /* ViewController.swift in Sources */,
 				95371FFD22D97F230087236A /* AppDelegate.swift in Sources */,
-				9537201222D97F450087236A /* HDRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,11 +359,12 @@
 		};
 		9537200C22D97F280087236A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
-				INFOPLIST_FILE = HDRoutes/Info.plist;
+				INFOPLIST_FILE = HDRoutesExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +378,12 @@
 		};
 		9537200D22D97F280087236A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
-				INFOPLIST_FILE = HDRoutes/Info.plist;
+				INFOPLIST_FILE = HDRoutesExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95371FF422D97F230087236A /* Build configuration list for PBXProject "HDRoutes" */ = {
+		95371FF422D97F230087236A /* Build configuration list for PBXProject "HDRoutesExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9537200922D97F280087236A /* Debug */,
@@ -346,7 +407,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9537200B22D97F280087236A /* Build configuration list for PBXNativeTarget "HDRoutes" */ = {
+		9537200B22D97F280087236A /* Build configuration list for PBXNativeTarget "HDRoutesExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9537200C22D97F280087236A /* Debug */,

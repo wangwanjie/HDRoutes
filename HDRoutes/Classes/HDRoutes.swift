@@ -14,7 +14,7 @@ private let kHDRoutesURLKey = "HDRoutesURL"
 private let kHDRoutesNamespaceKey = "HDRoutesNamespace"
 private let kHDRoutesGlobalNamespaceKey = "HDRoutesGlobalNamespace"
 
-typealias HDRoutesHanlderBlock = (([String: Any]) -> Bool)
+public typealias HDRoutesHanlderBlock = (([String: Any]) -> Bool)
 
 private class Route {
     weak var parentRoutesController: HDRoutes?
@@ -27,7 +27,7 @@ private class Route {
 
     // MARK: - public methods
 
-    func parametersForURL(_ url: URL?, pathComponents: [String]?, fragmentComponents: [String]?) -> [String: Any]? {
+    public func parametersForURL(_ url: URL?, pathComponents: [String]?, fragmentComponents: [String]?) -> [String: Any]? {
         let patternNS = pattern! as NSString
 
         if patternPathComponents == nil {
@@ -149,19 +149,19 @@ extension Route: CustomStringConvertible {
     }
 }
 
-class HDRoutes {
+open class HDRoutes {
     private static var routeControllersMap = [String?: HDRoutes?]()
     private var routes = [Route]()
     private var namespaceKey: String = kHDRoutesGlobalNamespaceKey
 
     public static var verboseLoggingEnabled: Bool = false
     public static var shouldDecodePlusSymbols: Bool = true
-    public var shouldFallbackToGlobalRoutes = false
-    public var unmatchedURLHandler: ((HDRoutes, URL, [String: Any]?) -> Void)?
+    open var shouldFallbackToGlobalRoutes = false
+    open var unmatchedURLHandler: ((HDRoutes, URL, [String: Any]?) -> Void)?
 
     // MARK: - public methods
 
-    static func routesForScheme(_ scheme: String) -> HDRoutes? {
+    public static func routesForScheme(_ scheme: String) -> HDRoutes? {
         var routesController: HDRoutes?
 
         if routeControllersMap[scheme] == nil {
@@ -177,7 +177,7 @@ class HDRoutes {
 
     // MARK: - register && unregister
 
-    func addRoute(pattern: String, priority: Int = 0, handler: @escaping HDRoutesHanlderBlock) {
+    public func addRoute(pattern: String, priority: Int = 0, handler: @escaping HDRoutesHanlderBlock) {
         let optionalRoutePatterns = _optionalRoutesForPattern(pattern)
 
         if let optionalRoutePatterns = optionalRoutePatterns, optionalRoutePatterns.count > 0 {
@@ -191,13 +191,13 @@ class HDRoutes {
         registerRoute(pattern: pattern, priority: priority, handler: handler)
     }
 
-    func addRoutes(patterns: [String], handler: @escaping HDRoutesHanlderBlock) {
+    public func addRoutes(patterns: [String], handler: @escaping HDRoutesHanlderBlock) {
         for pattern in patterns {
             addRoute(pattern: pattern, handler: handler)
         }
     }
 
-    func removeRoute(pattern: String) {
+    public func removeRoute(pattern: String) {
         var routePattern = pattern
 
         if !routePattern.hasPrefix("/") {
@@ -220,46 +220,46 @@ class HDRoutes {
         }
     }
 
-    func removeAllRoutes() {
+    public func removeAllRoutes() {
         routes.removeAll()
     }
 
-    func setHandlerBlock(_ hanlderBlock: @escaping HDRoutesHanlderBlock, forKeyedSubscript routePatten: String) {
+    public func setHandlerBlock(_ hanlderBlock: @escaping HDRoutesHanlderBlock, forKeyedSubscript routePatten: String) {
         addRoute(pattern: routePatten, handler: hanlderBlock)
     }
 
-    static func unregisterRouteScheme(_ scheme: String) {
+    public static func unregisterRouteScheme(_ scheme: String) {
         routeControllersMap.removeValue(forKey: scheme)
     }
 
-    static func unregisterAllRouteSchemes() {
+    public static func unregisterAllRouteSchemes() {
         routeControllersMap.removeAll()
     }
 
-    static func globalRoutes() -> HDRoutes? {
+    public static func globalRoutes() -> HDRoutes? {
         return routesForScheme(kHDRoutesGlobalNamespaceKey)
     }
 
     // MARK: - judge
 
-    static func canRouteURL(_ url: URL) -> Bool {
+    public static func canRouteURL(_ url: URL) -> Bool {
         if let result = routesControllerForURL(url: url)?.canRouteURL(url) {
             return result
         }
         return false
     }
 
-    func canRouteURL(_ url: URL) -> Bool {
+    public func canRouteURL(_ url: URL) -> Bool {
         return routeURL(url, parameters: nil, executeRouteBlock: false)
     }
 
-    func routeURL(_ url: URL, parameters: [String: Any]? = nil) -> Bool {
+    public func routeURL(_ url: URL, parameters: [String: Any]? = nil) -> Bool {
         return routeURL(url, parameters: parameters, executeRouteBlock: true)
     }
 
     // MARK: - route
 
-    static func routeURL(_ url: URL, parameters: [String: Any]? = nil) -> Bool {
+    public static func routeURL(_ url: URL, parameters: [String: Any]? = nil) -> Bool {
         if let route = routesControllerForURL(url: url) {
             return route.routeURL(url, parameters: parameters)
         } else {
@@ -507,11 +507,11 @@ class HDRoutes {
 }
 
 extension HDRoutes: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return routes.description
     }
 
-    static func allRoutes() -> String {
+    public static func allRoutes() -> String {
         var descriptionString = "\n"
 
         for (_, routesController) in routeControllersMap {

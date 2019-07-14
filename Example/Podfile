@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'HDRoutesExample' do
+  pod 'HDRoutes', :path => '../'
+
+end

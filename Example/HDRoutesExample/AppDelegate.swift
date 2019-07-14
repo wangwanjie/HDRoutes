@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import HDRoutes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         let routes = HDRoutes.globalRoutes()
 
         routes?.addRoute(pattern: "/user/view/:userID", handler: { (params) -> Bool in
@@ -23,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true // return true to say we have handled the route
         })
 
-        HDRoutes.verboseLoggingEnabled = true
+        // HDRoutes.verboseLoggingEnabled = true
 
         HDRoutes.routesForScheme("ViPay")?.addRoute(pattern: "/test/:opt(/a)(/b)(/c)", priority: 10, handler: { (params) -> Bool in
             print("打开测试页面\(params)")

@@ -1,0 +1,6 @@
+framework module HDRoutes {
+  umbrella header "HDRoutes-umbrella.h"
+
+  export *
+  module * { export * }
+}

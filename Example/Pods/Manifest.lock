@@ -1,0 +1,16 @@
+PODS:
+  - HDRoutes (0.2.0)
+
+DEPENDENCIES:
+  - HDRoutes (from `../`)
+
+EXTERNAL SOURCES:
+  HDRoutes:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HDRoutes: c7fafd6d4d58cbd3709a8a1fe5d6011629053636
+
+PODFILE CHECKSUM: b6e4643c8f8ba89994ed2951077b474ea7ab6d43
+
+COCOAPODS: 1.6.1
