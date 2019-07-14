@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HDRoutess
+//  HDRoutes
 //
 //  Created by VanJay on 2019/7/13.
 //  Copyright © 2019 VanJay. All rights reserved.
@@ -13,6 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let routes = HDRoutes.globalRoutes()
+
+        routes?.addRoute(pattern: "/user/view/:userID", handler: { (params) -> Bool in
+            let userID = params["userID"] // defined in the route by specifying ":userID"
+
+            // present UI for viewing user with ID 'userID'
+
+            return true // return true to say we have handled the route
+        })
+
         HDRoutes.verboseLoggingEnabled = true
 
         HDRoutes.routesForScheme("ViPay")?.addRoute(pattern: "/test/:opt(/a)(/b)(/c)", priority: 10, handler: { (params) -> Bool in
@@ -42,6 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             _ = HDRoutes.routeURL(URL(string: "jhkhjkkk")!)
         }
 
+        HDRoutes.globalRoutes()?.setHandlerBlock({ (_) -> Bool in
+            // ...
+
+            true
+        }, forKeyedSubscript: "/user/view/:userID")
+
         return true
+    }
+
+    func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        return HDRoutes.routeURL(url)
     }
 }

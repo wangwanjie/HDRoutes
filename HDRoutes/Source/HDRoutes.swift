@@ -8,11 +8,11 @@
 
 import UIKit
 
-private let kHDRoutesWildcardComponentsKey = "HDRoutesWildcardComponents"
+public let kHDRoutesWildcardComponentsKey = "HDRoutesWildcardComponents"
 private let kHDRoutesPatternKey = "HDRoutesPattern"
 private let kHDRoutesURLKey = "HDRoutesURL"
 private let kHDRoutesNamespaceKey = "HDRoutesNamespace"
-private let kHDRoutessGlobalNamespaceKey = "HDRoutessGlobalNamespace"
+private let kHDRoutesGlobalNamespaceKey = "HDRoutesGlobalNamespace"
 
 typealias HDRoutesHanlderBlock = (([String: Any]) -> Bool)
 
@@ -152,7 +152,7 @@ extension Route: CustomStringConvertible {
 class HDRoutes {
     private static var routeControllersMap = [String?: HDRoutes?]()
     private var routes = [Route]()
-    private var namespaceKey: String = kHDRoutessGlobalNamespaceKey
+    private var namespaceKey: String = kHDRoutesGlobalNamespaceKey
 
     public static var verboseLoggingEnabled: Bool = false
     public static var shouldDecodePlusSymbols: Bool = true
@@ -237,7 +237,7 @@ class HDRoutes {
     }
 
     static func globalRoutes() -> HDRoutes? {
-        return routesForScheme(kHDRoutessGlobalNamespaceKey)
+        return routesForScheme(kHDRoutesGlobalNamespaceKey)
     }
 
     // MARK: - judge
@@ -270,7 +270,7 @@ class HDRoutes {
     // MARK: - private methods
 
     private func _isGlobalRoutesController() -> Bool {
-        return namespaceKey == kHDRoutessGlobalNamespaceKey
+        return namespaceKey == kHDRoutesGlobalNamespaceKey
     }
 
     private func registerRoute(pattern: String, priority: Int, handler: @escaping HDRoutesHanlderBlock) {
